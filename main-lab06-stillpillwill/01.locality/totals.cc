@@ -16,6 +16,11 @@ std::array<int, kHoursPerWeek> TotalsHourByHour(
 
 std::array<int, kHoursPerWeek> TotalsDriverByDriver(
     const std::vector<std::array<int, kHoursPerWeek>>& waits) {
-  // TODO
-  return {};
+  std::array<int, kHoursPerWeek> totals{};
+  for (std::size_t d = 0; d < waits.size(); ++d) {
+    for (std::size_t h = 0; h < kHoursPerWeek; ++h) {
+      totals[h] += waits[d][h];
+    }
+  }
+  return totals;
 }

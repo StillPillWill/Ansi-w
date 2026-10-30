@@ -1,7 +1,7 @@
 all: benchmark test_totals
 
 benchmark: benchmark.cc totals.cc generate.cc totals.h
-	clang++ @compile_flags.txt -o benchmark benchmark.cc totals.cc generate.cc
+	clang++ @compile_flags.txt -O2 -o benchmark benchmark.cc totals.cc generate.cc
 
 test_totals: test_totals.cc totals.cc generate.cc totals.h
 	clang++ @compile_flags.txt -o test_totals test_totals.cc totals.cc generate.cc
