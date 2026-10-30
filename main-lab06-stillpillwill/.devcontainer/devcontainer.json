@@ -1,0 +1,32 @@
+{
+    "name": "lab06",
+
+    "build": {
+        // Note that docker install GCC's libstdc++-14-dev for good C++20
+        // support on the standard library side
+        "dockerfile": "Dockerfile"
+    },
+
+    // Install LLVM 21 to get good C++20 support from the compiler
+    "features": {
+        "ghcr.io/devcontainers-community/features/llvm:3": {
+            "version": "21"
+        }
+    },
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                // Language server
+                "llvm-vs-code-extensions.vscode-clangd",
+                // Debugger front-end
+                "vadimcn.vscode-lldb",
+                // Don't install the default extension defined by MS docker
+                // image
+                "-ms-vscode.cpptools",
+                "-ms-vscode.cpp-devtools",
+                "-ms-vscode.cmake-tools"
+            ]
+        }
+    }
+}

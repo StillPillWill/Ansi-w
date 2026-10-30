@@ -1,0 +1,3 @@
+# Force all line endings to LF when the repo is cloned, since it is meant to be
+# opened within a Linux environment (via a dev container)
+* text=auto eol=lf

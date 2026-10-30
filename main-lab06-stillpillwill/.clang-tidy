@@ -1,0 +1,36 @@
+---
+Checks:
+  # Disable all checks, then enable a small selection
+  - -*
+  - bugprone-integer-division
+  - readability-identifier-naming
+  - readability-magic-numbers
+  - google-build-using-namespace
+
+# Google naming conventions
+CheckOptions:
+  # Allow small integers, such as household sizes in case labels
+  - key: readability-magic-numbers.IgnoredIntegerValues
+    value: '1;2;3;4;5;6;7;8'
+  - key: readability-identifier-naming.FunctionCase
+    value: CamelCase
+  - key: readability-identifier-naming.VariableCase
+    value: lower_case
+  - key: readability-identifier-naming.ConstexprVariableCase
+    value: CamelCase
+  - key: readability-identifier-naming.ConstexprVariablePrefix
+    value: k
+  - key: readability-identifier-naming.GlobalConstantCase
+    value: CamelCase
+  - key: readability-identifier-naming.GlobalConstantPrefix
+    value: k
+  # Keep local constants as snake_case by default, unless they are styled as
+  # program-life constants
+  - key: readability-identifier-naming.LocalConstantIgnoredRegexp
+    value: '^k[A-Z][A-Za-z0-9]*$'
+
+# Don't treat warnings as errors
+WarningsAsErrors: ''
+
+# Use .clang-format to reformat fixes
+FormatStyle: file

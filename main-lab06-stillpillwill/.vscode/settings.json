@@ -1,0 +1,94 @@
+{
+    // Disable the Copilot-generated summaries in C/C++ extension hovers.
+    "C_Cpp.copilotHover": "disabled",
+    // Do not offer C/C++ code snippets as suggestions.
+    "C_Cpp.suggestSnippets": false,
+
+    // Disable and hide built-in Copilot AI features in this workspace.
+    "chat.disableAIFeatures": true,
+    // Hide the Open in Agents Window title-bar button.
+    "chat.titleBar.openInAgentsWindow.enabled": false,
+    // Hide the title-bar Copilot sign-in button.
+    "chat.titleBar.signIn.enabled": false,
+    // Hide the agent status control beside/in the command center.
+    "chat.agentsControl.enabled": "hidden",
+    // Disable Copilot agent mode in chat.
+    "chat.agent.enabled": false,
+
+    // Show each variable's current value inline in the editor while stepping.
+    "debug.inlineValues": "on",
+    // Open the Debug Console as soon as a debugging session starts, so that the
+    // debugged program's output is visible without looking for it.
+    "debug.internalConsoleOptions": "openOnSessionStart",
+    // Keep the debug toolbar floating above the editor, as described in the
+    // lab handout, regardless of user settings.
+    "debug.toolBarLocation": "floating",
+
+    // Disable inline ghost-text suggestions, including non-AI providers.
+    "editor.inlineSuggest.enabled": false,
+    // Hide the code overview minimap on the right side of the editor.
+    "editor.minimap.enabled": false,
+    // Do not pin enclosing scope headers at the top of the editor.
+    "editor.stickyScroll.enabled": false,
+
+    // Avoid unsolicited extension recommendation notifications.
+    "extensions.ignoreRecommendations": true,
+
+    // Use Unix (LF) line endings for newly created files.
+    "files.eol": "\n",
+    // End saved files with a newline.
+    "files.insertFinalNewline": true,
+    // Remove trailing spaces when saving.
+    "files.trimTrailingWhitespace": true,
+
+    // Disable Copilot inline code completions for all languages.
+    "github.copilot.enable": { "*": false },
+    // Disable Copilot next edit suggestions.
+    "github.copilot.nextEditSuggestions.enabled": false,
+
+    // Treat what is typed in the Debug Console as LLDB commands, such as
+    // `p <expression>`, rather than as bare expressions to evaluate.
+    "lldb.consoleMode": "commands",
+    // Never fall back to a disassembly view: this course debugs source only.
+    "lldb.showDisassembly": "never",
+
+    // Do not automatically forward discovered server ports.
+    "remote.autoForwardPorts": false,
+    // Do not restore previously forwarded ports.
+    "remote.restoreForwardedPorts": false,
+    // Do not forward ports when opening terminal/debug-console URLs.
+    "remote.forwardOnOpen": false,
+
+    // Always show the repositories collapse in the source code sidebar tab
+    "scm.alwaysShowRepositories": true,
+
+    // Default to bash in the terminal, regardless of user settings
+    "terminal.integrated.defaultProfile.linux": "bash",
+    // Hide the "ask Copilot" hint shown in new terminals.
+    "terminal.integrated.initialHint": false,
+    // Disable automatic shell integration (command tracking/navigation).
+    "terminal.integrated.shellIntegration.enabled": false,
+
+    // Hide "Ask in Chat" in the command palette.
+    "workbench.commandPalette.showAskInChat": false,
+    // Disable AI-based natural-language search in the command palette.
+    "workbench.commandPalette.experimental.enableNaturalLanguageSearch": false,
+    // Hide the "start with Copilot" hint in empty editors.
+    "workbench.editor.empty.hint": "hidden",
+    // Open files in regular tabs instead of reusable preview tabs.
+    "workbench.editor.enablePreview": false,
+    // Start newly opened workspaces with the secondary sidebar hidden.
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    // Disable online natural-language search in Settings.
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    // Hide the AI search toggle in Settings.
+    "workbench.settings.showAISearchToggle": false,
+    // Hide tips and keyboard-shortcut hints in the empty editor area.
+    "workbench.tips.enabled": false,
+
+    // Deprecated options (for older VS Code versions)
+
+    // Hide the Copilot/chat button in the title bar (pre-1.104; no longer
+    // exists in 1.136, exact removal version unknown).
+    "chat.commandCenter.enabled": false,
+}

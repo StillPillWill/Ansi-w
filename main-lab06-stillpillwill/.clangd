@@ -1,0 +1,10 @@
+# Don't let clangd insert #include directives or argument placeholders on its
+# own when completing code
+Completion:
+  HeaderInsertion: Never
+  ArgumentLists: Delimiters
+
+# Never suggest `using` declarations for the standard library
+Style:
+  FullyQualifiedNamespaces:
+    - std
